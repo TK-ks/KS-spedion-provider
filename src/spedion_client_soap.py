@@ -11,7 +11,6 @@ from zeep.transports import Transport
 SPEDION_SOAP_USER = 'SimpexWSKSGmbH2'
 SPEDION_SOAP_PASSWORD = 'h#pN5HWecrJ8z7g'
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -54,10 +53,6 @@ class SpedionSoapClient(Client):
         'https://simpex.spedion.de/simpex/3.1/Services/'
         'MessageService.asmx?WSDL'
     )
-    WSDL_VEHICLE_INFO_URL = (
-        'https://services.spedion.de/CustomerVehicleInfoExtern/5/'
-        'CustomerVehicleInfoExtern.asmx?WSDL'
-    )
 
     def __init__(self, wsse=None, service_name=None, port_name=None, plugins=None, settings=None):
         super().__init__(
@@ -66,25 +61,6 @@ class SpedionSoapClient(Client):
             self._get_auth_transport(),
             service_name, port_name, plugins, settings
         )
-
-    def get_tour(self, tour_nr):
-        """Retrieve a tour from Spedion"""
-        return self._do_request(
-            self.service.GetTourByTourNr,
-            TourNr=tour_nr
-        )
-
-    def get_tour_single(self, tour_nr):
-        """Retrieve a tour from Spedion"""
-        return self._do_request(
-            self.service.GetSingleTourInfoByTournr, # GetTourByTourNr,
-            tournr=tour_nr
-        )
-
-
-    def get_vehicle_info(self):
-        return self._do_request(self.service.GetVehicleInfoExtern, VehicleInfoExtern={})
-
 
     def _do_request(self, method, *args, **kwargs):
         """Make a SOAP request and handle errors"""
@@ -124,20 +100,4 @@ class SpedionSoapClient(Client):
         return transport
 
 
-spideon_client = SpedionSoapClient()
-
-"""
-TODO:
-1. get tours (need Orders
-
-Dataflow:
-Order > Tours
-
-Tour Number = Order.ID + SPEDION_TOUR_POSTFIX
-
-"""
-
-
-
-...
-
+spideon_clients = SpedionSoapClient()

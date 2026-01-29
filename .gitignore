@@ -50,3 +50,5 @@ venv.bak/
 /site
 cython_debug/
 .idea/
+
+docs/
