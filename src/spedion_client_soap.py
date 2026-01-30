@@ -2,12 +2,15 @@ import logging
 import os
 from functools import cached_property
 
+from dotenv import load_dotenv
 from requests import Session
 from requests.auth import HTTPBasicAuth
 from zeep import Client
 from zeep.helpers import serialize_object
 from zeep.transports import Transport
 
+
+load_dotenv('.env')
 
 SPEDION_SOAP_USER = os.environ.get('SPEDION_SOAP_USER')
 SPEDION_SOAP_PASSWORD = os.environ.get('SPEDION_SOAP_PASSWORD')

@@ -1,4 +1,4 @@
-from typing import List, OrderedDict, Any
+from typing import List, OrderedDict
 import sys
 from types import ModuleType, FunctionType
 from gc import get_referents
@@ -6,47 +6,49 @@ from gc import get_referents
 
 def decouple_data(
         vehicle_messages_data: List[OrderedDict],
-        vehicleName: int,
-        gps_only: bool
-) -> dict[str, list[Any] | dict[str, int | Any]] | None:
-    """
-
-    :param gps_only:
-    :param vehicle_messages_data:
-    :param vehicleName:
-    :param gps_only:
-    :return:
-    """
+        vehicle_name: int,
+        no_driver_data: bool = False,
+        no_position_extra: bool = False,
+        no_timestamp: bool = False,
+        no_telematics: bool = False
+):
     if not vehicle_messages_data:
         return None
+    if no_driver_data and no_position_extra and no_telematics and no_timestamp:
+        return None
 
+    result = {}
     clean_data = []
-    for d in vehicle_messages_data:
-        data_dict = {
-            'Time': str(d['Time']),
-            'Position': dict(d['Position'])
-        }
-        if not gps_only:
-            data_dict = {
-                **data_dict,
-                'TelematicData': dict(d['TelematicData']),
-                'Form': d['Form'],
-                'FormDescription': d['FormDescription']
-            }
-        clean_data.append(data_dict)
 
-    if gps_only:
-        return {'gps_data': clean_data}
-
-    return {
-        'messages_data': clean_data,
-        'driver_data': {
-            'VehicleName': vehicleName,
+    if not no_driver_data:
+        result['driver_data'] = {
+            'VehicleName': vehicle_name,
             'Id': vehicle_messages_data[0]['Id'],
             'DriverId': vehicle_messages_data[0]['DriverId'],
             'DriverExternal': vehicle_messages_data[0]['DriverExternal']
         }
-    }
+    for d in vehicle_messages_data:
+        if not (no_timestamp or no_telematics or no_position_extra):
+            clean_data.append(dict(d))
+            continue
+
+        data = {}
+        if not no_timestamp:
+            data['Time'] = str(d['Time'])
+
+        if not no_telematics:
+            data['TelematicData'] = d['TelematicData']
+
+        data['Position'] = d['Position'] \
+            if not no_position_extra \
+            else {
+                'Latitude': d['Position']['Latitude'],
+                'Longitude': d['Position']['Longitude']
+            }
+        clean_data.append(data)
+
+    result['messages_data'] = clean_data
+    return result
 
 
 # Custom objects know their class.
