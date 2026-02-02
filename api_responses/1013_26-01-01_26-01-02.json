@@ -1,0 +1,397 @@
+{
+  "driver_data" : {
+    "VehicleName" : 1013,
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    }
+  },
+  "messages_data" : [ {
+    "Time" : "2026-01-01 05:00:00+00:00",
+    "Form" : 1615,
+    "FormDescription" : "Tägliche Meldung",
+    "Position" : {
+      "Latitude" : 51.11808,
+      "Longitude" : 6.21191,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 08:50:41+00:00",
+    "Form" : 10033,
+    "FormDescription" : "Android Update Discarded By User",
+    "Position" : {
+      "Latitude" : 51.11799,
+      "Longitude" : 6.21193,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : {
+      "AddInfo" : [ {
+        "Key" : "PackageName",
+        "Value" : "com.teamviewer.quicksupport.market"
+      }, {
+        "Key" : "UpdateVersion",
+        "Value" : "15.73.37"
+      }, {
+        "Key" : "CurrentVersion",
+        "Value" : "15.55.499"
+      }, {
+        "Key" : "UpdateVersionCode",
+        "Value" : "1573037"
+      }, {
+        "Key" : "AppName",
+        "Value" : "QuickSupport"
+      } ]
+    }
+  }, {
+    "Time" : "2026-01-01 08:50:45+00:00",
+    "Form" : 10033,
+    "FormDescription" : "Android Update Discarded By User",
+    "Position" : {
+      "Latitude" : 51.11799,
+      "Longitude" : 6.21195,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : {
+      "AddInfo" : [ {
+        "Key" : "PackageName",
+        "Value" : "com.teamviewer.quicksupport.market"
+      }, {
+        "Key" : "UpdateVersion",
+        "Value" : "15.73.37"
+      }, {
+        "Key" : "CurrentVersion",
+        "Value" : "15.55.499"
+      }, {
+        "Key" : "UpdateVersionCode",
+        "Value" : "1573037"
+      }, {
+        "Key" : "AppName",
+        "Value" : "QuickSupport"
+      } ]
+    }
+  }, {
+    "Time" : "2026-01-01 08:54:52+00:00",
+    "Form" : 2102,
+    "FormDescription" : "SPEDION Navigation Nutzung",
+    "Position" : {
+      "Latitude" : 51.11811,
+      "Longitude" : 6.21189,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 11:00:00+00:00",
+    "Form" : 1615,
+    "FormDescription" : "Tägliche Meldung",
+    "Position" : {
+      "Latitude" : 51.11811,
+      "Longitude" : 6.21195,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 13:07:40+00:00",
+    "Form" : 2100,
+    "FormDescription" : "SPEDION Mobile Control Nutzung",
+    "Position" : {
+      "Latitude" : 51.11803,
+      "Longitude" : 6.21199,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 14:48:08+00:00",
+    "Form" : 1630,
+    "FormDescription" : "Unverantwortet",
+    "Position" : {
+      "Latitude" : 51.11797,
+      "Longitude" : 6.21184,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 14:53:51+00:00",
+    "Form" : 1724,
+    "FormDescription" : "Sonstige Tätigkeit",
+    "Position" : {
+      "Latitude" : 51.118,
+      "Longitude" : 6.21201,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 15:48:49+00:00",
+    "Form" : 10033,
+    "FormDescription" : "Android Update Discarded By User",
+    "Position" : {
+      "Latitude" : 51.1179,
+      "Longitude" : 6.21195,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : {
+      "AddInfo" : [ {
+        "Key" : "PackageName",
+        "Value" : "com.teamviewer.quicksupport.market"
+      }, {
+        "Key" : "UpdateVersion",
+        "Value" : "15.73.37"
+      }, {
+        "Key" : "CurrentVersion",
+        "Value" : "15.55.499"
+      }, {
+        "Key" : "UpdateVersionCode",
+        "Value" : "1573037"
+      }, {
+        "Key" : "AppName",
+        "Value" : "QuickSupport"
+      } ]
+    }
+  }, {
+    "Time" : "2026-01-01 17:00:00+00:00",
+    "Form" : 1615,
+    "FormDescription" : "Tägliche Meldung",
+    "Position" : {
+      "Latitude" : 51.11812,
+      "Longitude" : 6.21197,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  }, {
+    "Time" : "2026-01-01 23:00:00+00:00",
+    "Form" : 1615,
+    "FormDescription" : "Tägliche Meldung",
+    "Position" : {
+      "Latitude" : 51.11801,
+      "Longitude" : 6.2119,
+      "Nation" : "DE",
+      "Zip" : "41844",
+      "City" : "Wegberg (Wildenrath)",
+      "Street" : "Friedrich-List-Allee"
+    },
+    "TelematicData" : {
+      "Odometer" : null,
+      "Speed" : 0.0,
+      "FuelLevel" : null,
+      "TotalFuel" : 0.0,
+      "ServiceDistance" : null
+    },
+    "Id" : 946207310,
+    "DriverId" : 186088,
+    "DriverExternal" : {
+      "Id" : 0,
+      "Pin" : "5574",
+      "Din" : "KGD0000000122400",
+      "FirstName" : "Nurlan",
+      "LastName" : "Musabekov",
+      "Customer" : null
+    },
+    "AdditionalInfos" : null
+  } ]
+}

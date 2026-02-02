@@ -12,14 +12,31 @@ parser = argparse.ArgumentParser(
     epilog='Text at the bottom of help'
 )
 
-parser.add_argument('vehicle_number',    required=True,  help='Vehicle number')
-parser.add_argument('start_time',        required=True,  help='Starting datetime of the selection')
-parser.add_argument('-et', '--end_time', required=False, help='End datetime of the selection')
+
+def print_help():
+    print('Usage: python gps_data_fetcher.py '
+          '\n\t[vehicle_number]:<int> '
+          '\n\t[start_time]:<str>       - Start time in format "2026-01-01"'
+          '\n\t-et [end_time]:<str>     - End time in format "2026-01-21", OPTIONAL, if none is specified datetime.today(UTC) will be used'
+          '\n\t-dd [no_driver_data]     - exclude driver`s info, default=True'
+          '\n\t-pos [no_position_extra] - exclude extra positional data (like coutry, city and street), default=True'
+          '\n\t-time [no_timestamp]     - exclude time, default=True'
+          '\n\t-tele [no_telematics]    - exclude telematics data (fuel %, speed, etc.), default=True'
+    )
+
+
+parser.add_argument('vehicle_number', help='Vehicle number')
+parser.add_argument('start_time',     help='\tStarting datetime of the selection')
+parser.add_argument('-et', '--end_time', required=False, help='\tEnd datetime of the selection')
 # Mutators
-parser.add_argument('-dd',   '--no_driver_data',    default=False, action='store_true')
-parser.add_argument('-pos',  '--no_position_extra', default=False, action='store_true')
-parser.add_argument('-time', '--no_timestamp',      default=False, action='store_true')
-parser.add_argument('-tele', '--no_telematics',     default=False, action='store_true')
+parser.add_argument('-dd',   '--no_driver_data',    default=False, action='store_true', help='\tExclude driver`s data')
+parser.add_argument('-pos',  '--no_position_extra', default=False, action='store_true', help='\tExclude extra positional data')
+parser.add_argument('-time', '--no_timestamp',      default=False, action='store_true', help='\tExclude timestamps for events')
+parser.add_argument('-tele', '--no_telematics',     default=False, action='store_true', help='\tExclude telematics data')
+
+if '-h' in sys.argv:
+    parser.print_help(sys.stderr)
+    sys.exit(1)
 
 args = parser.parse_args()
 
@@ -31,16 +48,8 @@ try:
         else datetime.datetime.now(datetime.UTC)
 except ValueError as e:
     print(str(e))
-    print('Usage: python gps_data_fetcher.py '
-          '\n\t[vehicle_number]:<int> '
-          '\n\t[start_time]:<str>       - Start time in format "2026-01-01"'
-          '\n\t-et [end_time]:<str>     - End time in format "2026-01-21", OPTIONAL, if none is specified datetime.today(UTC) will be used'
-          '\n\t-dd [no_driver_data]     - exclude driver`s info, default=True'
-          '\n\t-pos [no_position_extra] - exclude extra positional data (like coutry, city and street), default=True'
-          '\n\t-time [no_timestamp]     - exclude time, default=True'
-          '\n\t-tele [no_telematics]    - exclude telematics data (fuel %, speed, etc.), default=True'
-    )
-    sys.exit(1)
+    print_help()
+    sys.exit(2)
 
 
 def __main__():
@@ -59,14 +68,12 @@ def __main__():
         no_timestamp=args.no_timestamp
     )
     try:
-        clean_data = json.dumps(data)
+        clean_data = json.dumps(data, default=str)
         print(clean_data)
         return clean_data
     except Exception as e:
         print(str(e))
-        sys.exit(2)
-
-
+        sys.exit(3)
 
 
 __main__()
